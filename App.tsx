@@ -90,25 +90,24 @@ const App: React.FC = () => {
       </header>
 
       <main className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-16">
-        {/* Preview Container: Sticky on Large Screens, Top on Mobile */}
+        {/* Preview Container */}
         <div className="lg:col-span-6 xl:col-span-7 order-1 lg:order-2">
-          <div className="lg:sticky lg:top-10 space-y-4">
-            <div className="flex items-center justify-between px-2">
+          <div className="lg:sticky lg:top-10 space-y-6">
+            <div className="flex items-center justify-between px-4">
               <div className="flex items-center gap-2">
                 <div className={`w-2 h-2 rounded-full ${isComplete ? 'bg-green-500 animate-pulse' : 'bg-amber-400'}`}></div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Live Render</span>
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Studio Live Render</span>
               </div>
-              <span className="text-[10px] font-bold text-slate-400 bg-white px-2 py-0.5 rounded border border-slate-100 shadow-sm uppercase">4:5 Aspect Ratio</span>
             </div>
             
-            <div id="graphic-wrapper" className="bg-white p-2 md:p-4 lg:p-6 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl border border-slate-100">
+            <div id="graphic-wrapper" className="relative shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-[2.5rem] md:rounded-[3rem]">
                <Preview data={data} innerRef={graphicRef} />
             </div>
             
             <div className="flex items-center gap-3 justify-center p-4 bg-slate-100/50 rounded-2xl border border-dashed border-slate-200">
               <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
-                This is a live preview. Use "Download Graphic" for the high-res result.
+                Download for high-resolution 3000x3750px output.
               </p>
             </div>
           </div>
