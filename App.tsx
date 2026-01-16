@@ -1,8 +1,8 @@
 
 import React, { useState, useRef, useCallback, useMemo } from 'react';
-import Form from './components/Form.tsx';
-import Preview from './components/Preview.tsx';
-import { SOTMData, defaultData } from './types.ts';
+import Form from './components/Form';
+import Preview from './components/Preview';
+import { SOTMData, defaultData } from './types';
 import * as htmlToImage from 'html-to-image';
 
 const App: React.FC = () => {
@@ -28,11 +28,10 @@ const App: React.FC = () => {
     
     setIsExporting(true);
     try {
-      // Small delay to ensure any dynamic rendering is caught
       await new Promise(resolve => setTimeout(resolve, 300));
       
       const dataUrl = await htmlToImage.toPng(graphicRef.current, {
-        pixelRatio: 2.5, // Increased quality for the export
+        pixelRatio: 2.5,
         backgroundColor: '#000000',
         cacheBust: true,
       });
@@ -89,7 +88,6 @@ const App: React.FC = () => {
       </header>
 
       <main className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-        {/* Real-time Preview: Top on mobile, right on desktop */}
         <div className="lg:col-span-7 order-1 lg:order-2">
           <div className="lg:sticky lg:top-8 flex flex-col items-center">
             <div className="mb-4 flex items-center justify-between w-full px-2">
@@ -112,7 +110,6 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        {/* Form Section: Bottom on mobile, left on desktop */}
         <div className="lg:col-span-5 order-2 lg:order-1">
           <Form 
             data={data} 

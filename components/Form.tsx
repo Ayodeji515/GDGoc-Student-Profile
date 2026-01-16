@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SOTMData, defaultData } from '../types.ts';
+import { SOTMData, defaultData } from '../types';
 
 interface FormProps {
   data: SOTMData;
@@ -46,7 +46,6 @@ const Form: React.FC<FormProps> = ({ data, onChange, onDownload, isComplete, isE
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-        {/* Profile Section */}
         <div className="col-span-1 sm:col-span-2">
           <label className="block text-[10px] md:text-[11px] font-black text-slate-500 uppercase tracking-widest mb-3">
             Profile Portrait <span className="text-red-500">*</span>
@@ -82,7 +81,6 @@ const Form: React.FC<FormProps> = ({ data, onChange, onDownload, isComplete, isE
           </div>
         </div>
 
-        {/* Text Fields */}
         <div className="col-span-1 sm:col-span-2">
           <FormField label="Full Name" name="fullName" value={data.fullName} onChange={handleInputChange} required />
         </div>

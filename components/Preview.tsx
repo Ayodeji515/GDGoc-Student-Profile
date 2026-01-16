@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SOTMData } from '../types.ts';
+import { SOTMData } from '../types';
 
 interface PreviewProps {
   data: SOTMData;
@@ -32,10 +32,8 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
         color: 'white'
       }}
     >
-      {/* Background Subtle Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '30px 30px' }}></div>
 
-      {/* Top Header Section */}
       <div className="flex justify-between items-start mb-10 z-10">
         <div className="relative">
             <div className="flex items-center gap-3 md:gap-5">
@@ -58,10 +56,7 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
         </div>
       </div>
 
-      {/* Main Content Body */}
       <div className="grid grid-cols-12 gap-6 md:gap-10 items-start flex-grow z-10">
-        
-        {/* Left Area: Profile & Name (Cols 1-6) */}
         <div className="col-span-6 flex flex-col space-y-4 md:space-y-6">
            <div className="relative bg-white/5 rounded-[1.5rem] md:rounded-[2.5rem] p-1.5 border border-white/10 overflow-hidden shadow-2xl aspect-[1/1.2]">
              {data.profileImage ? (
@@ -88,7 +83,6 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
            </div>
         </div>
 
-        {/* Right Area: Attribute Rows (Cols 7-12) */}
         <div className="col-span-6 flex flex-col space-y-2 md:space-y-4 pt-1">
           <AttributeRow label="DEPT" value={data.department} />
           <AttributeRow label="LEVEL" value={data.level} />
@@ -100,7 +94,6 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
         </div>
       </div>
 
-      {/* Footer Section */}
       <div className="mt-8 border-t border-white/5 pt-6 flex flex-col items-center space-y-4 md:space-y-6 z-10">
         <div className="font-signature text-2xl md:text-4xl text-green-400 drop-shadow-lg">{data.signatureText}</div>
         
