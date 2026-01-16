@@ -28,7 +28,7 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
       className="relative flex flex-col font-montserrat overflow-hidden select-none"
       style={{
         background: 'linear-gradient(135deg, #020617, #000000)',
-        padding: 'clamp(30px, 7vw, 75px) clamp(25px, 6vw, 60px)',
+        padding: 'clamp(35px, 8vw, 85px) clamp(25px, 6vw, 60px)',
         color: 'white'
       }}
     >
@@ -36,10 +36,10 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '30px 30px' }}></div>
 
       {/* Header Section */}
-      <div className="flex justify-between items-start mb-12 md:mb-20 z-10">
+      <div className="flex justify-between items-start mb-12 md:mb-16 z-10">
         <div className="relative">
             <div className="flex items-center gap-3 md:gap-5">
-                <GDGBrackets size={80} />
+                <GDGBrackets size={75} />
                 <div className="flex flex-col leading-tight">
                     <span className="text-[14px] md:text-[22px] font-black text-white tracking-tight break-words max-w-[180px] md:max-w-none">
                       {data.organizationName || 'Google Developer Groups'}
@@ -52,16 +52,16 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
         </div>
 
         <div className="text-right leading-none uppercase">
-          <div className="text-[8px] md:text-[11px] font-black tracking-[0.3em] text-gray-500 mb-1">RECOGNITION</div>
+          <div className="text-[8px] md:text-[11px] font-black tracking-[0.3em] text-gray-500 mb-1.5">RECOGNITION</div>
           <div className="text-2xl md:text-5xl font-black italic text-white leading-none">STUDENT</div>
-          <div className="text-[9px] md:text-[14px] font-bold bg-green-500 text-white inline-block px-4 py-1.5 mt-1 rounded-sm tracking-widest whitespace-nowrap">OF THE MONTH</div>
+          <div className="text-[9px] md:text-[14px] font-bold bg-green-500 text-white inline-block px-4 py-1.5 mt-1.5 rounded-sm tracking-widest whitespace-nowrap">OF THE MONTH</div>
         </div>
       </div>
 
       {/* Main Content Grid */}
-      <div className="grid grid-cols-12 gap-8 md:gap-14 items-start flex-grow z-10">
+      <div className="grid grid-cols-12 gap-8 md:gap-12 items-stretch flex-grow z-10">
         {/* Left Column: Image, Name, Motivation, Signature */}
-        <div className="col-span-6 flex flex-col h-full space-y-6 md:space-y-10">
+        <div className="col-span-6 flex flex-col space-y-6 md:space-y-10">
            <div className="space-y-6 md:space-y-8">
              {/* Profile Image */}
              <div className="relative bg-white/5 rounded-[1.5rem] md:rounded-[3rem] p-1.5 border border-white/10 overflow-hidden shadow-2xl aspect-[1/1.2]">
@@ -76,13 +76,13 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
              </div>
              
              {/* Name Banner */}
-             <div className="bg-white py-5 md:py-8 px-4 md:px-6 rounded-2xl md:rounded-[2.5rem] text-center shadow-xl border-b-[6px] md:border-b-[10px] border-slate-200">
+             <div className="bg-white py-5 md:py-7 px-4 md:px-6 rounded-2xl md:rounded-[2.5rem] text-center shadow-xl border-b-[6px] md:border-b-[10px] border-slate-200">
                <h3 className="text-sm md:text-2xl font-black uppercase tracking-wide leading-tight text-black line-clamp-2">{data.fullName || 'Full Name'}</h3>
              </div>
            </div>
 
-           {/* Motivation & Signature pushed towards bottom but within flow */}
-           <div className="mt-auto space-y-8 md:space-y-12">
+           {/* Motivation & Signature */}
+           <div className="flex-grow flex flex-col justify-end space-y-6 md:space-y-12 pb-4">
              <div className="space-y-4 md:space-y-6 bg-white/5 p-6 md:p-10 rounded-2xl md:rounded-[3rem] border border-white/5 shadow-inner">
                <div className="text-green-400 text-[8px] md:text-[11px] font-black uppercase tracking-[0.2em] border-l-4 border-green-500 pl-4">
                   {data.motivationTitle}
@@ -92,22 +92,22 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
                </p>
              </div>
 
-             {/* Full Width Signature Box */}
+             {/* Signature Box */}
              <div className="w-full flex flex-col items-center pt-2">
-                <div className="w-full flex items-center gap-5 mb-3">
+                <div className="w-full flex items-center gap-4 mb-3">
                    <div className="h-px bg-white/10 flex-grow"></div>
                    <div className="text-[7px] md:text-[11px] font-black text-gray-500 tracking-[0.4em] uppercase whitespace-nowrap">Authenticated By</div>
                    <div className="h-px bg-white/10 flex-grow"></div>
                 </div>
-                <div className="font-signature text-4xl md:text-7xl text-white drop-shadow-[0_0_25px_rgba(34,197,94,0.7)] whitespace-nowrap text-center leading-none py-3">
+                <div className="font-signature text-3xl md:text-6xl text-white drop-shadow-[0_0_20px_rgba(34,197,94,0.7)] whitespace-nowrap text-center leading-none py-2">
                   {data.signatureText}
                 </div>
              </div>
            </div>
         </div>
 
-        {/* Right Column: Attribute Rows - Spaced out to fill the height */}
-        <div className="col-span-6 flex flex-col h-full space-y-4 md:space-y-6 justify-between pt-2">
+        {/* Right Column: Attribute Rows - Spaced out to fill the vertical room */}
+        <div className="col-span-6 flex flex-col justify-between h-full space-y-4 md:space-y-5">
           <AttributeRow label="DEPT" value={data.department} />
           <AttributeRow label="LEVEL" value={data.level} />
           <AttributeRow label="ROLE" value={data.business} />
@@ -119,8 +119,8 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
       </div>
 
       {/* Footer / Social Media */}
-      <div className="mt-auto pt-14 flex flex-col items-center z-10">
-        <div className="flex flex-wrap justify-center gap-8 md:gap-14 text-[10px] md:text-[15px] font-bold tracking-[0.2em] text-gray-500 uppercase">
+      <div className="mt-auto pt-10 flex flex-col items-center z-10">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-[10px] md:text-[15px] font-bold tracking-[0.2em] text-gray-500 uppercase">
           <div className="flex items-center gap-2 md:gap-4">
             <svg className="w-4 h-4 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             <span>{data.instagramHandle || 'Instagram'}</span>
@@ -136,8 +136,8 @@ const Preview: React.FC<PreviewProps> = ({ data, innerRef }) => {
 };
 
 const AttributeRow: React.FC<{ label: string; value: string }> = ({ label, value }) => (
-  <div className="flex items-stretch min-h-[44px] md:min-h-[72px] bg-white/5 rounded-lg md:rounded-[2rem] overflow-hidden border border-white/10 group shadow-lg">
-    <div className="bg-green-600 text-white flex items-center justify-center text-[7px] md:text-[12px] font-black w-[48px] md:w-[105px] px-1 text-center uppercase leading-none shrink-0 tracking-widest">
+  <div className="flex items-stretch min-h-[44px] md:min-h-[72px] bg-white/5 rounded-lg md:rounded-[2.2rem] overflow-hidden border border-white/10 group shadow-lg">
+    <div className="bg-green-600 text-white flex items-center justify-center text-[7px] md:text-[12px] font-black w-[48px] md:w-[100px] px-1 text-center uppercase leading-none shrink-0 tracking-widest">
       {label}
     </div>
     <div className="flex-grow flex items-center px-4 md:px-7 py-2.5">
