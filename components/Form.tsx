@@ -143,7 +143,13 @@ const Form: React.FC<FormProps> = ({ data, onChange, onDownload, isComplete, isE
         </div>
 
         <div className="col-span-1 sm:col-span-2 pt-4">
-          <FormField label="Signature / Credits" name="signatureText" value={data.signatureText} onChange={handleInputChange} />
+          <FormField 
+            label="Signature / Credits" 
+            name="signatureText" 
+            value={data.signatureText} 
+            readOnly={true}
+            className="bg-slate-100 text-slate-500 cursor-not-allowed border-dashed"
+          />
         </div>
       </div>
     </div>

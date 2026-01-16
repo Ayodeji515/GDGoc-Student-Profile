@@ -8,12 +8,12 @@ interface PreviewProps {
 }
 
 const GDGBrackets = ({ size = 80 }: { size?: number }) => (
-  <svg width={size} height={size * 0.7} viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-    <g transform="translate(25, 35)">
+  <svg width={size * 1.3} height={size * 0.65} viewBox="0 0 130 70" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+    <g transform="translate(30, 35)">
       <rect x="0" y="-7.5" width="40" height="15" rx="7.5" transform="rotate(-45 0 0)" fill="#EA4335" />
       <rect x="0" y="-7.5" width="40" height="15" rx="7.5" transform="rotate(45 0 0)" fill="#4285F4" />
     </g>
-    <g transform="translate(75, 35)">
+    <g transform="translate(100, 35)">
       <rect x="-40" y="-7.5" width="40" height="15" rx="7.5" transform="rotate(45 0 0)" fill="#34A853" />
       <rect x="-40" y="-7.5" width="40" height="15" rx="7.5" transform="rotate(-45 0 0)" fill="#FBBC04" />
     </g>

@@ -52,13 +52,13 @@ const App: React.FC = () => {
     <div className="min-h-screen p-4 md:p-6 lg:p-10 text-slate-900 bg-slate-50">
       <header className="max-w-[1400px] mx-auto mb-8 lg:mb-12 flex flex-col sm:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 md:w-16 md:h-16 bg-black rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg border border-white/10 group overflow-hidden">
-             <svg width="40" height="26" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-                <g transform="translate(25, 35)">
+          <div className="w-14 h-14 md:w-20 md:h-20 bg-black rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg border border-white/10 group overflow-hidden">
+             <svg width="60" height="32" viewBox="0 0 130 70" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(30, 35)">
                   <rect x="0" y="-7.5" width="40" height="15" rx="7.5" transform="rotate(-45 0 0)" fill="#EA4335" />
                   <rect x="0" y="-7.5" width="40" height="15" rx="7.5" transform="rotate(45 0 0)" fill="#4285F4" />
                 </g>
-                <g transform="translate(75, 35)">
+                <g transform="translate(100, 35)">
                   <rect x="-40" y="-7.5" width="40" height="15" rx="7.5" transform="rotate(45 0 0)" fill="#34A853" />
                   <rect x="-40" y="-7.5" width="40" height="15" rx="7.5" transform="rotate(-45 0 0)" fill="#FBBC04" />
                 </g>
