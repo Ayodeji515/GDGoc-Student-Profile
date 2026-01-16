@@ -85,8 +85,21 @@ const Form: React.FC<FormProps> = ({ data, onChange, onDownload, isComplete, isE
           <FormField label="Full Name" name="fullName" value={data.fullName} onChange={handleInputChange} required />
         </div>
 
-        <FormField label="Organization" name="organizationName" value={data.organizationName} onChange={handleInputChange} placeholder="Google Developer Groups" />
-        <FormField label="Chapter/Subtitle" name="subTitle" value={data.subTitle} onChange={handleInputChange} placeholder="Community Member" />
+        <FormField 
+          label="Organization" 
+          name="organizationName" 
+          value={data.organizationName} 
+          readOnly={true}
+          className="bg-slate-100 text-slate-500 cursor-not-allowed border-dashed"
+        />
+        <FormField 
+          label="Chapter/Subtitle" 
+          name="subTitle" 
+          value={data.subTitle} 
+          readOnly={true}
+          className="bg-slate-100 text-slate-500 cursor-not-allowed border-dashed"
+        />
+
         <FormField label="Department" name="department" value={data.department} onChange={handleInputChange} required placeholder="Computer Science" />
         <FormField label="Level" name="level" value={data.level} onChange={handleInputChange} placeholder="300 Level" />
         <FormField label="Role" name="business" value={data.business} onChange={handleInputChange} placeholder="UI/UX Designer" />
@@ -137,7 +150,7 @@ const Form: React.FC<FormProps> = ({ data, onChange, onDownload, isComplete, isE
   );
 };
 
-const FormField = ({ label, name, value, onChange, required = false, placeholder = "" }: any) => (
+const FormField = ({ label, name, value, onChange, required = false, placeholder = "", readOnly = false, className = "" }: any) => (
   <div className="space-y-1.5">
     <label className="block text-[10px] md:text-[11px] font-black text-slate-500 uppercase tracking-widest">
       {label} {required && <span className="text-red-500">*</span>}
@@ -148,7 +161,8 @@ const FormField = ({ label, name, value, onChange, required = false, placeholder
       value={value} 
       onChange={onChange} 
       placeholder={placeholder}
-      className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-green-500 outline-none transition-all" 
+      readOnly={readOnly}
+      className={`w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-green-500 outline-none transition-all ${className}`} 
     />
   </div>
 );

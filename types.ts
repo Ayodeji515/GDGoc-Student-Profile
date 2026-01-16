@@ -19,8 +19,8 @@ export interface SOTMData {
 }
 
 export const defaultData: SOTMData = {
-  organizationName: '',
-  subTitle: '',
+  organizationName: 'Google Developer Group',
+  subTitle: 'Community Member',
   fullName: '',
   profileImage: null,
   department: '',
