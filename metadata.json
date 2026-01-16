@@ -1,0 +1,7 @@
+{
+  "name": "GDGoC FUOYE Graphic Studio",
+  "description": "The official graphic generation tool for GDGoC FUOYE recognition programs.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
