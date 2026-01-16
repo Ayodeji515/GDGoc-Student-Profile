@@ -49,7 +49,7 @@ const App: React.FC = () => {
   }, [data.fullName, isComplete]);
 
   return (
-    <div className="min-h-screen p-4 md:p-6 lg:p-10 text-slate-900 bg-slate-50">
+    <div className="min-h-screen p-4 md:p-6 lg:p-10 pb-20 md:pb-32 text-slate-900 bg-slate-50">
       <header className="max-w-[1400px] mx-auto mb-8 lg:mb-12 flex flex-col sm:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 md:w-20 md:h-20 bg-black rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg border border-white/10 group overflow-hidden">
