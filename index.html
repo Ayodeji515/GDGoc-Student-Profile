@@ -18,7 +18,6 @@
       .font-signature {
         font-family: 'Dancing+Script', cursive;
       }
-      /* Ensure the graphic retains its aspect ratio and scales proportionally */
       #graphic-wrapper {
         width: 100%;
         max-width: 800px;
@@ -30,7 +29,6 @@
         width: 100%;
         height: auto;
       }
-      /* Custom scrollbar for better mobile UX */
       ::-webkit-scrollbar {
         width: 6px;
       }
@@ -42,18 +40,9 @@
         border-radius: 10px;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "html-to-image": "https://esm.sh/html-to-image@^1.11.13"
-  }
-}
-</script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
