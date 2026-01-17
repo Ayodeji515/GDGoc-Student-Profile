@@ -72,7 +72,6 @@ const App: React.FC = () => {
             <h1 className="text-2xl md:text-3xl font-black tracking-tighter leading-none">
               GDGoC <span className="text-green-600 italic">FUOYE</span>
             </h1>
-            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Studio Portfolio v1.0</p>
           </div>
         </div>
 
@@ -107,7 +106,7 @@ const App: React.FC = () => {
             <div className="flex items-center gap-3 justify-center p-4 bg-slate-100/50 rounded-2xl border border-dashed border-slate-200">
               <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
-                Download for high-resolution 3000x3750px output.
+                This is a live preview. Use "Download Graphic" for the high-res result.
               </p>
             </div>
           </div>
