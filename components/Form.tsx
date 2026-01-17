@@ -73,7 +73,7 @@ const Form: React.FC<FormProps> = ({ data, onChange, onDownload, isComplete, isE
             </label>
           </div>
           <div className="flex-grow w-full space-y-4">
-            <FormField label="Full Name" name="fullName" value={data.fullName} onChange={handleInputChange} required placeholder="e.g. John Doe" />
+            <FormField label="Full Name" name="fullName" value={data.fullName} onChange={handleInputChange} required placeholder="e.g. Ayodeji Emmanuel" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                <FormField label="Organization" name="organizationName" value={data.organizationName} readOnly className="bg-slate-50 opacity-60" />
                <FormField label="Status" name="subTitle" value={data.subTitle} readOnly className="bg-slate-50 opacity-60" />
@@ -88,7 +88,7 @@ const Form: React.FC<FormProps> = ({ data, onChange, onDownload, isComplete, isE
           <span className="w-4 h-px bg-green-600"></span> 02. Professional Info
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <FormField label="Department" name="department" value={data.department} onChange={handleInputChange} required placeholder="e.g. Computer Engineering" />
+          <FormField label="Department" name="department" value={data.department} onChange={handleInputChange} required placeholder="e.g. Computer Science" />
           <FormField label="Level" name="level" value={data.level} onChange={handleInputChange} placeholder="e.g. 400 Level" />
           <FormField label="Primary Role" name="business" value={data.business} onChange={handleInputChange} placeholder="e.g. Frontend Developer" />
           <FormField label="Brand/Alias" name="brandName" value={data.brandName} onChange={handleInputChange} placeholder="e.g. The Code Wizard" />
@@ -101,10 +101,10 @@ const Form: React.FC<FormProps> = ({ data, onChange, onDownload, isComplete, isE
           <span className="w-4 h-px bg-green-600"></span> 03. About You
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <FormField label="Hobbies" name="hobby" value={data.hobby} onChange={handleInputChange} placeholder="e.g. Chess & Bass Guitar" />
+          <FormField label="Hobbies" name="hobby" value={data.hobby} onChange={handleInputChange} placeholder="e.g. Coding" />
           <FormField label="Info Snippet" name="personality" value={data.personality} onChange={handleInputChange} placeholder="e.g. Team Player / Leader" />
           <div className="sm:col-span-2">
-            <FormField label="Current Tech Focus" name="techStory" value={data.techStory} onChange={handleInputChange} placeholder="e.g. Mastering Machine Learning with Python" />
+            <FormField label="Current Tech Focus" name="techStory" value={data.techStory} onChange={handleInputChange} placeholder="e.g. Mastering Blockchain Technology" />
           </div>
         </div>
       </div>
